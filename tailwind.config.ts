@@ -9,9 +9,15 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        'primary-background': "#262626",
+        'secondary-background': "#d7d7d9",
+        'primary-foreground': "#6e44ff",
       },
+      fontFamily: {
+        inter: 'var(--font-inter)',
+        gluten: 'var(--font-gluten)',
+        blackopsone: 'var(--font-black-ops-one)',
+      }
     },
   },
   plugins: [],
