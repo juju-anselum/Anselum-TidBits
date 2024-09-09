@@ -6,17 +6,28 @@ import { PortableText } from "@portabletext/react";
 
 const BlogPage = (props: blogCardInterface) => {
 	return (
-		<Box sx={{ width: '90%', height: '100%', marginInline: 'auto', padding: { xs: '12px 0px', md: '16px 0px', xl: '32px 0px' }, display: 'flex', flexDirection: 'column', alignItems: 'start', justifyContent: 'start', rowGap: 4, minHeight: '100vh' }}>
+		<Box sx={{
+			width: { xs: '90%', md: '80%' },
+			height: '100%',
+			marginInline: 'auto',
+			padding: { xs: '12px 0px', md: '16px 0px', xl: '32px 0px' },
+			display: 'flex',
+			flexDirection: 'column',
+			alignItems: 'start',
+			justifyContent: 'start',
+			rowGap: { xs: 2, md: 4 },
+			minHeight: '100vh'
+		}}>
 			<Typography variant="h5">{props.tags[0].title}</Typography>
 			<Typography variant="h2" sx={{ fontSize: { xs: '24px', md: '32px', xl: '48px' }, fontWeight: '500' }}>{props.title}</Typography>
 			<Box
 				sx={{
 					width: { sm: '100%', md: '90%' },
-					height: { xs: '300px', md: '500px', xl: '700px' },
-					marginInline: 'auto',
+					height: { xs: '300px', md: '600px', xl: '700px' },
+					margin: '16px auto',
 					objectFit: 'cover',
 					borderRadius: '8px',
-					// borderTopRightRadius: { sm: '8px', md: '92px', lg: '112px ', xl: '200px' },
+					borderTopRightRadius: { sm: '8px', md: '92px', lg: '112px ', xl: '200px' },
 					overflow: 'hidden',
 				}}>
 				<Image

@@ -9,8 +9,8 @@ export const Blogs = async () => {
 	const duplicateData = (data.concat(data)).concat(data)
 
 	return (
-		<>
-			<Grid2 container spacing={4} columns={{ xs: 4, sm: 8, md: 12, lg: 12 }} sx={{ width: '100%', marginTop: { sm: '8px', md: '16px', lg: '32px' } }}>
+		<div className="w-full my-10">
+			<Grid2 container spacing={4} columns={{ xs: 4, sm: 8, md: 12, lg: 12 }} sx={{ width: '100%' }}>
 				{
 					duplicateData.map((item, idx) => {
 						return (
@@ -23,7 +23,7 @@ export const Blogs = async () => {
 					})
 				}
 			</Grid2>
-		</>
+		</div>
 	);
 };
 

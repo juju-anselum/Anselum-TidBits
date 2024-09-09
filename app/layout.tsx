@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import { Navbar } from "./containers";
+import { Footer, Navbar } from "./containers";
 
 const blackOpsOne = localFont({
   src: "./assets/fonts/BlackOpsOne.ttf",
@@ -32,9 +32,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} ${blackOpsOne.variable} ${gluten.variable} antialiased max-w-screen-2xl mx-auto`}>
-        <div className='w-full max-w-[100vw] mx-auto px-5 2xl:px-0'>
+        <div className='w-full max-w-[100vw] overflow-x-hidden'>
           <Navbar />
           {children}
+          <Footer />
         </div>
       </body>
     </html>

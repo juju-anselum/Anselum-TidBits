@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Navbar() {
 	return (
-		<div className='w-full flex flex-col items-stretch'>
+		<div className='w-full md:w-[95%] mx-auto px-5 md:px-0 flex flex-col items-stretch'>
 			<div className="w-full py-6 flex items-center justify-between">
 				<Link href='/' passHref>
 					<div className="py-2 flex items-center gap-x-2 pointer-events-auto" >

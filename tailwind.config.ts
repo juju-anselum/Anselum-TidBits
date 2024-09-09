@@ -10,13 +10,13 @@ const config: Config = {
     extend: {
       colors: {
         'primary-background': "#262626",
-        'secondary-background': "#d7d7d9",
+        'secondary-background': "#484849",
         'primary-foreground': "#6e44ff",
       },
       fontFamily: {
         inter: 'var(--font-inter)',
         gluten: 'var(--font-gluten)',
-        blackopsone: 'var(--font-black-ops-one)',
+        blackOpsOne: 'var(--font-black-ops-one)',
       }
     },
   },
