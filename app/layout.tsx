@@ -9,12 +9,12 @@ const blackOpsOne = localFont({
 });
 
 const gluten = localFont({
-  src: "./assets/fonts/gluten.ttf",
+  src: "./assets/fonts/Gluten.ttf",
   variable: "--font-gluten"
 });
 
 const inter = localFont({
-  src: './assets/fonts/inter.ttf',
+  src: './assets/fonts/Inter.ttf',
   variable: '--font-inter',
 })
 
