@@ -14,7 +14,7 @@ const gluten = localFont({
 });
 
 const inter = localFont({
-  src: './assets/fonts/Inter.ttf',
+  src: './assets/fonts/inter.ttf',
   variable: '--font-inter',
 })
 
