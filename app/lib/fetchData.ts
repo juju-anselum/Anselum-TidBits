@@ -42,6 +42,28 @@ async function fetchBlog(slug: string) {
   return await client.fetch(query);
 }
 
+async function fetchBanner() {
+  const query = `
+    *[_type == 'banner']{
+        blog->{
+          _id,
+          title,
+          'slug': slug.current,
+          'image': image.asset._ref,
+          smallDescription,
+          readTime,
+          _createdAt,
+          tags[]->{
+            title,
+            'slug': slug.current
+          },
+          content
+        }
+      }
+  `;
+  return await client.fetch(query);
+}
+
 async function getBlog(slug: string) {
   const cachedData = await fetchFromFileCache();
   if (cachedData) {
@@ -66,4 +88,4 @@ async function getData() {
   return data;
 }
 
-export { getData, getBlog };
+export { getData, getBlog, fetchBanner };

@@ -32,9 +32,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} ${blackOpsOne.variable} ${gluten.variable} antialiased max-w-screen-2xl mx-auto`}>
-        <div className='w-full max-w-[100vw] overflow-x-hidden'>
+        <div className='w-full max-w-[100vw] min-h-screen overflow-x-hidden flex flex-col justify-start items-center'>
           <Navbar />
-          {children}
+          <div className="flex-1">{children}</div>
           <Footer />
         </div>
       </body>

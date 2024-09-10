@@ -7,7 +7,7 @@ import { PortableText } from "@portabletext/react";
 const BlogPage = (props: blogCardInterface) => {
 	return (
 		<Box sx={{
-			width: { xs: '90%', md: '80%' },
+			width: { xs: '95%', md: '100%' },
 			height: '100%',
 			marginInline: 'auto',
 			padding: { xs: '12px 0px', md: '16px 0px', xl: '32px 0px' },
@@ -27,7 +27,6 @@ const BlogPage = (props: blogCardInterface) => {
 					margin: '16px auto',
 					objectFit: 'cover',
 					borderRadius: '8px',
-					borderTopRightRadius: { sm: '8px', md: '92px', lg: '112px ', xl: '200px' },
 					overflow: 'hidden',
 				}}>
 				<Image

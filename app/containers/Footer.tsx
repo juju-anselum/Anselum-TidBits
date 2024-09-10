@@ -5,8 +5,8 @@ import { logo } from "../assets";
 
 const Footer = () => {
 	return (
-		<div className="w-[100%] md:w-[90%] min-h-[50vh] mt-5 lg:mt-20 mx-auto px-5 md:p-10 py-10 md:pt-20 rounded-t-3xl bg-primary-background">
-			<Stack direction={{ xs: 'column', md: 'row' }} justifyContent={'space-between'} gap={{ xs: 6, md: 10, lg: 20 }}>
+		<div className="w-[100%] md:w-[90%] max-w-screen-2xl mt-5 lg:mt-20 mx-auto px-5 md:p-10 py-10 md:pt-20 rounded-t-3xl bg-primary-background">
+			<Stack direction={{ xs: 'column', md: 'row', }} justifyContent={'space-between'} gap={{ xs: 6, md: 10, lg: 20 }}>
 
 				<Stack sx={{ maxWidth: { xs: '100%', md: '50%' } }} gap={2}>
 					<Link href='/' passHref>
@@ -36,7 +36,7 @@ const Footer = () => {
 			<div className='w-full flex flex-col items-stretch md:gap-y-3 mt-10 relative'>
 				<p className="absolute text-gray-500 text-sm right-5 top-5">@ 2024</p>
 				<div className='w-full h-[1px] bg-gray-300' />
-				<h1 className='pt-12 md:py-0 text-[9vw]  2xl:text-[140px] text-center font-light font-blackOpsOne text-secondary-background text-nowrap'>Anselum Tidbits</h1>
+				<h1 className='pt-12 md:py-0 text-[9vw] 2xl:text-[140px] text-center font-light font-blackOpsOne text-secondary-background text-nowrap'>Anselum Tidbits</h1>
 			</div>
 		</div>
 	);
