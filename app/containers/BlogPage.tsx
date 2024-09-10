@@ -19,7 +19,7 @@ const BlogPage = (props: blogCardInterface) => {
 			minHeight: '100vh'
 		}}>
 			<Typography variant="h5">{props.tags[0].title}</Typography>
-			<Typography variant="h2" sx={{ fontSize: { xs: '24px', md: '32px', xl: '48px' }, fontWeight: '500' }}>{props.title}</Typography>
+			<Typography variant="h2" sx={{ fontSize: { xs: '42px', md: '46px', xl: '52px' }, fontWeight: '500' }}>{props.title}</Typography>
 			<Box
 				sx={{
 					width: { sm: '100%', md: '90%' },

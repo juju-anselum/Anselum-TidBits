@@ -17,7 +17,7 @@ export default function BlogCard(props: blogCardInterface) {
 	return (
 		<Card
 			sx={{
-				maxWidth: 425,
+				maxWidth: 475,
 				margin: '0 auto',
 				borderRadius: '8px',
 				'&:hover': {
@@ -33,7 +33,7 @@ export default function BlogCard(props: blogCardInterface) {
 					height="140"
 					image={urlFor(props.image).url()}
 					alt="green iguana"
-					sx={{ width: '100%', height: { xs: '200px', md: '225px' }, objectFit: 'cover', borderRadius: '8px' }}
+					sx={{ width: '100%', height: { xs: '250px', md: '275px' }, objectFit: 'cover', borderRadius: '8px' }}
 				/>
 				<CardContent sx={{ paddingInline: '0px' }}>
 					<Stack direction="row" justifyContent="space-between" alignItems="center" gap={1} sx={{ marginBottom: '12px' }}>
