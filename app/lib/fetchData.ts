@@ -1,6 +1,7 @@
 import { client } from '../lib/sanity';
-import { fetchFromFileCache, storeInFileCache } from './fileCache';
-import { blogCardInterface } from './interface';
+import NodeCache from 'node-cache';
+
+const cache = new NodeCache({ stdTTL: 300 });
 
 async function fetchBlogs() {
   const query = `
@@ -65,26 +66,34 @@ async function fetchBanner() {
 }
 
 async function getBlog(slug: string) {
-  const cachedData = await fetchFromFileCache();
+  const cacheKey = `blog_${slug}`;
+  const cachedData = cache.get(cacheKey);
+
   if (cachedData) {
-    return cachedData.find((item: blogCardInterface) => item.slug === slug);
+    console.log('Returning blog data from cache...');
+    return cachedData;
   }
+
+  console.log('Fetching blog data from remote source...');
   const data = await fetchBlog(slug);
+
+  cache.set(cacheKey, data);
   return data;
 }
 
 async function getData() {
-  const cachedData = await fetchFromFileCache();
+  const cacheKey = 'allBlogs';
+  const cachedData = cache.get(cacheKey);
+
   if (cachedData) {
     console.log('Returning data from cache...');
     return cachedData;
   }
 
-  console.log('Fetching data from remote source');
+  console.log('Fetching data from remote source...');
   const data = await fetchBlogs();
 
-  await storeInFileCache(data);
-
+  cache.set(cacheKey, data);
   return data;
 }
 
