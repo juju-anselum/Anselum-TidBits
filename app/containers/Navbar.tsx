@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { logo } from "../assets";
-import { Button } from "../components";
 import Link from "next/link";
 
 export default function Navbar() {
@@ -13,9 +12,8 @@ export default function Navbar() {
 						<p className="h-6 xl:h-6 text-2xl font-bold font-gluten select-none">Anselum</p>
 					</div>
 				</Link>
-				{/* <Button text="Subscribe Now!" /> */}
 			</div>
 			<div className='w-full h-[1px] bg-gray-300' />
 		</div>
 	);
-}
+} 
