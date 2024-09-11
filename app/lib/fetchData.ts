@@ -69,12 +69,9 @@ async function getBlog(slug: string) {
   const cacheKey = `blog_${slug}`;
   const cachedData = cache.get(cacheKey);
 
-  if (cachedData) {
-    console.log('Returning blog data from cache...');
+  if (cachedData)
     return cachedData;
-  }
 
-  console.log('Fetching blog data from remote source...');
   const data = await fetchBlog(slug);
 
   cache.set(cacheKey, data);
@@ -85,12 +82,9 @@ async function getData() {
   const cacheKey = 'allBlogs';
   const cachedData = cache.get(cacheKey);
 
-  if (cachedData) {
-    console.log('Returning data from cache...');
+  if (cachedData)
     return cachedData;
-  }
 
-  console.log('Fetching data from remote source...');
   const data = await fetchBlogs();
 
   cache.set(cacheKey, data);
