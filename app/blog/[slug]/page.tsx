@@ -8,23 +8,33 @@ interface Props {
 		slug: string;
 	};
 }
-
 export async function generateMetadata({ params }: Props) {
 	const data = await getBlog(params.slug).then(res => res[0]);
+	const imageUrl = data.image ? urlFor(data.image).url() : `https://anselum-tidbits.vercel.app/blogBanner.png`;
 	return {
 		title: data.title,
 		description: data.smallDescription,
-		openGraphs: {
+		openGraph: {
 			title: data.title,
 			description: data.smallDescription,
 			url: `https://anselum-tidbits.vercel.app/blog/${data.slug}`,
-			image: urlFor(data.image).url() || `https://anselum-tidbits.vercel.app/blogBanner.png`,
+			images: [
+				{
+					url: imageUrl,
+					alt: data.title
+				}
+			],
 		},
 		twitter: {
 			card: "summary_large_image",
 			title: data.title,
 			description: data.smallDescription,
-			image: urlFor(data.image).url() || `https://anselum-tidbits.vercel.app/blogBanner.png`,
+			images: [
+				{
+					url: imageUrl,
+					alt: data.title
+				}
+			],
 		}
 	}
 }
