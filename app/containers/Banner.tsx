@@ -13,7 +13,7 @@ const Banner = (props: blogCardInterface) => {
 		<>
 			<Link href={`/blog/${props.slug}`} passHref>
 				<Box sx={{
-					width: { xs: '95%', md: '100%' },
+					width: '100%',
 					margin: { xs: '16px auto', md: '32px auto' },
 				}}>
 					<Typography variant="h3" sx={{ marginBottom: '16px', fontSize: { xs: '32px', md: '36px' } }}>

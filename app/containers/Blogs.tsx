@@ -9,9 +9,9 @@ export const Blogs = async () => {
 	const data: blogCardInterface[] = await getData()
 	const bannerData: blogCardInterface = await fetchBanner().then(res => res[0].blog)
 	return (
-		<div className="w-full my-10">
+		<div className="w-[95%] md:w-full mx-auto my-10">
 			<Banner {...bannerData} />
-			<Typography variant="h3" sx={{ margin: '16px 0', fontSize: { xs: '32px', md: '36px' } }}>
+			<Typography variant="h3" sx={{ margin: '36px auto 16px', fontSize: { xs: '32px', md: '36px' }, textAlign: 'left' }}>
 				All Insights
 			</Typography>
 			<Grid2 container spacing={4} columns={{ xs: 4, sm: 8, md: 12, lg: 12 }} sx={{ width: '100%' }}>

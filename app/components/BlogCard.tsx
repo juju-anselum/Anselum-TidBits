@@ -23,7 +23,8 @@ export default function BlogCard(props: blogCardInterface) {
 				'&:hover': {
 					boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.05)',
 					transition: 'box-shadow 0.3s ease-in-out', bgcolor: 'transparent'
-				}
+				},
+				border: '1px solid rgba(0, 0, 0, 0.05)'
 			}}
 			elevation={0}
 		>
