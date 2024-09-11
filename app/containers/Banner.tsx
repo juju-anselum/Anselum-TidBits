@@ -16,12 +16,12 @@ const Banner = (props: blogCardInterface) => {
 					width: { xs: '95%', md: '100%' },
 					margin: { xs: '16px auto', md: '32px auto' },
 				}}>
-					<Typography variant="h3" sx={{ marginBottom: '16px' }}>
-						Featured Posts
+					<Typography variant="h3" sx={{ marginBottom: '16px', fontSize: { xs: '32px', md: '36px' } }}>
+						Featured Post
 					</Typography>
 					<Card
 						sx={{
-							padding: { xs: '10px', md: '16px' },
+							padding: { xs: '8px', md: '12px', lg: '16px' },
 							borderRadius: '8px',
 							'&:hover': {
 								boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.05)',
@@ -33,9 +33,9 @@ const Banner = (props: blogCardInterface) => {
 					>
 						<CardActionArea sx={{
 							width: '100%',
-							padding: { xs: '16px', md: '12px' },
+							height: '100%',
 							display: 'flex',
-							alignItems: 'center',
+							alignItems: 'stretch',
 							justifyContent: 'space-between',
 							flexDirection: { xs: 'column', md: 'row' },
 							gap: { xs: 2, md: 4, lg: 10 },
@@ -47,16 +47,23 @@ const Banner = (props: blogCardInterface) => {
 								height="140"
 								image={urlFor(props.image).url()}
 								alt="green iguana"
-								sx={{ width: { xs: '100%', md: '50%', lg: '50%' }, height: { xs: '300px', md: '350px' }, objectFit: 'cover', borderRadius: '8px' }}
+								sx={{ width: { xs: '100%', md: '50%', lg: '50%' }, height: { xs: '300px', lg: '350px' }, objectFit: 'cover', borderRadius: '8px' }}
 							/>
-							<CardContent sx={{ paddingInline: '0px' }}>
+							<CardContent sx={{
+								paddingInline: '0px',
+								minHeight: '100%',
+								display: 'flex',
+								flexDirection: 'column',
+								justifyContent: 'start',
+								gap: 1,
+							}}>
 								<Stack direction="row" justifyContent="space-between" alignItems="center" gap={1} sx={{ marginBottom: { xs: '16px', md: '24px' } }}>
 									<Chip variant='outlined' label={props.tags[0].title} />
 									<Typography variant="body2" color="text.secondary">
 										{formattedDate}
 									</Typography>
 								</Stack>
-								<Typography gutterBottom variant="h3" component="div" sx={{
+								<Typography gutterBottom variant="h5" component="div" sx={{
 									color: 'text.primary',
 									fontWeight: '500',
 									overflow: 'hidden',
