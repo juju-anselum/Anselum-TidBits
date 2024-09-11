@@ -18,11 +18,25 @@ const inter = localFont({
   variable: '--font-inter',
 })
 
-
 export const metadata: Metadata = {
   title: "Anselum TidBits",
   description: "Personal Blog app about Tech, Programming, Web Development, and more.",
+  openGraph: {
+    url: "https://anselum-tidbits.vercel.app/",
+    type: "website",
+    title: "Anselum TidBits",
+    description: "Personal Blog app about Tech, Programming, Web Development, and more.",
+    images: ['./assets/img/blogBanner.png'],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "https://anselum-tidbits.vercel.app/",
+    title: "Anselum TidBits",
+    description: "Personal Blog app about Tech, Programming, Web Development, and more.",
+    images: ['./assets/img/blogBanner.png'],
+  },
 };
+
 
 export default function RootLayout({
   children,
