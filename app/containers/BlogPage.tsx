@@ -16,10 +16,10 @@ const BlogPage = (props: blogCardInterface) => {
 			flexDirection: 'column',
 			alignItems: 'start',
 			justifyContent: 'start',
-			rowGap: { xs: 2, md: 4 },
+			rowGap: 2,
 			minHeight: '100vh'
 		}}>
-			<Typography variant="h5">{props.tags[0].title}</Typography>
+			<Typography variant="body1">{props.tags[0].title}</Typography>
 			<Typography variant="h2" sx={{ fontSize: { xs: '42px', md: '46px', xl: '52px' }, fontWeight: '500' }}>{props.title}</Typography>
 			<Box
 				sx={{
