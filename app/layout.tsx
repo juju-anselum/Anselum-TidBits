@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     description: "Personal Blog app about Tech, Programming, Web Development, and more.",
     images: ['https://anselum-tidbits.vercel.app/blogBanner.png'],
   },
-};
+}
 
 
 export default function RootLayout({
