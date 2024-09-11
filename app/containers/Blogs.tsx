@@ -1,5 +1,5 @@
 import { BlogCard } from "../components";
-import { Grid2 } from "@mui/material";
+import { Grid2, Typography } from "@mui/material";
 import { blogCardInterface } from "../lib/interface";
 import { fetchBanner, getData } from "../lib/fetchData";
 import Link from "next/link";
@@ -11,6 +11,9 @@ export const Blogs = async () => {
 	return (
 		<div className="w-full my-10">
 			<Banner {...bannerData} />
+			<Typography variant="h3" sx={{ margin: '16px 0', fontSize: { xs: '32px', md: '36px' } }}>
+				All Insights
+			</Typography>
 			<Grid2 container spacing={4} columns={{ xs: 4, sm: 8, md: 12, lg: 12 }} sx={{ width: '100%' }}>
 				{
 					data.map((item, idx) => {

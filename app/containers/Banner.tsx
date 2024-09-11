@@ -17,7 +17,7 @@ const Banner = (props: blogCardInterface) => {
 					margin: { xs: '16px auto', md: '32px auto' },
 				}}>
 					<Typography variant="h3" sx={{ marginBottom: '16px', fontSize: { xs: '32px', md: '36px' } }}>
-						Featured Post
+						Featured Blog
 					</Typography>
 					<Card
 						sx={{
