@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ansleum-Tidbits
+
+**Ansleum-Tidbits** is a blog web app built with **Next.js**, **TypeScript**, **Material UI**, and **Tailwind CSS**. The content is managed using **Sanity** as a headless CMS.
+
+## Features
+
+- Next.js for server-side rendering and static generation
+- TypeScript for type safety and better development experience
+- Material UI and Tailwind CSS for responsive and customizable UI
+- Sanity CMS integration for easy content management
 
 ## Getting Started
 
-First, run the development server:
+To run this project locally:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. **Clone the repository:**
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+   ```bash
+   git clone https://github.com/juju-anselum/Anselum-TidBits.git
+   cd ansleum-tidbits
+   ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+2. **Install dependencies:**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+   ```bash
+   npm install
+   ```
 
-## Learn More
+3. **Configure environment variables:**
 
-To learn more about Next.js, take a look at the following resources:
+   - Rename the `.env.example` file to `.env`:
+     ```bash
+     mv .env.example .env
+     ```
+   - Update the `SANITY_PROJECT_ID` in the `.env` file with your own Sanity project ID.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4. **Run the development server:**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   ```bash
+   npm run dev
+   ```
 
-## Deploy on Vercel
+5. Open [http://localhost:3000](http://localhost:3000) to view the project in the browser.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Technologies Used
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Next.js** - Server-side rendering framework
+- **TypeScript** - Static type checker
+- **Material UI** - UI component library
+- **Tailwind CSS** - Utility-first CSS framework
+- **Sanity** - Headless CMS for managing blog content
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
