@@ -9,7 +9,9 @@ interface Props {
 }
 
 const Blog = async (props: Props) => {
-	const data: blogCardInterface = await getBlog(props.params.slug);
+	const data: blogCardInterface = await getBlog(props.params.slug).then(res => res[0]);
+	console.log(data)
+
 	return (
 		<>
 			<BlogPage {...data} />

@@ -5,6 +5,7 @@ import { urlFor } from "../lib/sanity";
 import { PortableText } from "@portabletext/react";
 
 const BlogPage = (props: blogCardInterface) => {
+
 	return (
 		<Box sx={{
 			width: { xs: '95%', md: '100%' },
